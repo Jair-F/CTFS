@@ -12,7 +12,7 @@ def num_to_hex_str(number:bytes) -> str:
 
 if __name__ == "__main__":
     hashcode = 0x21DD09EC
-    filler = 0x01010101
+    filler = 0xcafebabe
 
     out_str = num_to_hex_str(filler)*4 + num_to_hex_str(hashcode - filler * 4)
     print('./col $(echo -ne \'' + out_str + '\')')
