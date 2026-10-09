@@ -9,4 +9,5 @@ RUN sudo apt install -y python3 python3-pip git gpg tmux socat ncat
 
 ADD requirements.txt .
 
+RUN curl --proto '=https' --tlsv1.2 -LsSf 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb
 RUN uv pip install --break-system-packages --system -r requirements.txt
