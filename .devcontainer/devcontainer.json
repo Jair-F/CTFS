@@ -3,7 +3,8 @@
     // "image": "",
     "build": {
         "context": "..",
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "options": ["--platform=linux/amd64"]
     },
     "privileged": true,
     "customizations": {
@@ -19,7 +20,7 @@
     },
     "mounts":[
         "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,readonly",
-        "source=${localEnv:HOME}/.gitconfig,target=/home/vscode//.gitconfig,type=bind,readonly",
+        "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,readonly",
         "source=/dev,target=/dev,type=bind",
     ],
     "containerEnv": {
@@ -28,11 +29,10 @@
     "runArgs": [
         "--network=host",
         "--cap-add=SYS_PTRACE",
-        "--security-opt",
-        "seccomp=unconfined"
+        "--security-opt=seccomp=unconfined",
+        "--platform=linux/amd64"
     ],
     "initializeCommand": "",
     "postCreateCommand": ".devcontainer/setup_devcontainer.sh",
-
     "remoteUser": "root"
 }
