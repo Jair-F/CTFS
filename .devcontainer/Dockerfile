@@ -5,7 +5,7 @@ USER root
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 RUN sudo apt update && sudo apt upgrade -y
-RUN sudo apt install -y python3 python3-pip git gpg tmux socat
+RUN sudo apt install -y python3 python3-pip git gpg tmux socat ncat
 
 ADD requirements.txt .
 
