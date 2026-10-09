@@ -14,7 +14,10 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "ms-python.isort",
-                "ritwickdey.LiveServer"
+                "ritwickdey.LiveServer",
+                "ms-vscode.cpptools-themes",
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack"
             ]
         }
     },
