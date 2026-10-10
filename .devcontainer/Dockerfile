@@ -16,6 +16,7 @@ RUN dpkg --add-architecture i386 && \
         git \
         gpg \
         tmux \
+        vim \
         socat \
         ncat \
         gdb \
